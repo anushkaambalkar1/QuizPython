@@ -2,7 +2,7 @@ import random
 #Question to be asked
 print("**************|Welcome to quiz|**************")
 name = input("Enter your name : ")
-#print("Let's Start!!")
+#print("Let's Begin!!")
 quiz_data = [
     {
         "question": "What does HTML stand for?",

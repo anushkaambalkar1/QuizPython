@@ -9,40 +9,40 @@
     7  sudo apt-get update
     8  sudo apt-get install jenkins
     9  jenkins --version
-   10  sudo systemctl enable jenkins
-   11  sudo systemctl start jenkins
-   12  sudo systemctl status jenkins
-   13  sudo cat /var/lib/jenkins/secrets/initialAdminPassword
-   14  ssh-keygen
-   15  ls
-   16  cat id_rsa
-   17  cd .ssh
-   18  ls
-   19  cat id_rsa
-   20  cat id_rsa.pub
-   21  cd
-   22  cd /var/lib/jenkins/workspace/QuizPipeline
-   23  ls
-   24  sudo apt install python3
-   25  python3 quiz.py
-   26  sudo rm Dockerfile
-   27  sudo apt install docker.io
-   28  sudo vim Dockerfile
-   29  ls
-   30  docker build . -t quiz-game
-   31  sudo usermod -a -G docker $USER
-   32  sudo reboot
-   33  clear
-   34  history
-   35  cd /var/lib/jenkins/workspace/QuizPipeline
-   36  docker build . -t quiz-game
-   37  docker run -d --name quiz-game -p 8000:8000 quiz-game
-   38  docker ps
-   39  docker kill 1d6c50b50f11
-   40  history
-   41  sudo chmod 777 /var/lib/jenkins/workspace/QuizPipeline
-   42  sudo usermod -a -G docker jenkins
-   43  sudo systemctl restart jenkins
-   44  history
+    10  sudo systemctl enable jenkins
+    11  sudo systemctl start jenkins
+    12  sudo systemctl status jenkins
+    13  sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+    14  ssh-keygen
+    15  ls
+    16  cat id_rsa
+    17  cd .ssh
+    18  ls
+    19  cat id_rsa
+    20  cat id_rsa.pub
+    21  cd
+    22  cd /var/lib/jenkins/workspace/QuizPipeline
+    23  ls
+    24  sudo apt install python3
+    25  python3 quiz.py
+    26  sudo rm Dockerfile
+    27  sudo apt install docker.io
+    28  sudo vim Dockerfile
+    29  ls
+    30  docker build . -t quiz-game
+    31  sudo usermod -a -G docker $USER
+    32  sudo reboot
+    33  clear
+    34  history
+    35  cd /var/lib/jenkins/workspace/QuizPipeline
+    36  docker build . -t quiz-game
+    37  docker run -d --name quiz-game -p 8000:8000 quiz-game
+    38  docker ps
+    39  docker kill 1d6c50b50f11
+    40  history
+    41  sudo chmod 777 /var/lib/jenkins/workspace/QuizPipeline
+    42  sudo usermod -a -G docker jenkins
+    43  sudo systemctl restart jenkins
+    44  history
 # After all this code runs successfully on ec2 and docker container and image is built by using both ec2 instance and jenkins.
 # At the end, Github webhook is also created which automatically reflects the changes in the jenkins project whenever the changes are made in the code of the project from the developer end.
